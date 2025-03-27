@@ -1,10 +1,21 @@
 import { ViewConfig } from '@vaadin/hilla-file-router/types.js';
 
 export const config: ViewConfig = { menu: { order: 1, icon: 'line-awesome/svg/react.svg' }, title: 'Todos' };
+
 import { useEffect, useState } from 'react';
 import { TodoEndpoint } from 'Frontend/generated/endpoints';
 import Todo from 'Frontend/generated/com/example/application/data/Todo';
 
+import {
+  Button,
+  Paper,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+} from "@mui/material";
 
 const TodosView = () => {
     const [todos, setTodos] = useState<Todo[]>([]);
@@ -33,6 +44,7 @@ const TodosView = () => {
       {todos.map((todo) => (
         <p key={todo.id}>{todo.title}</p>
       ))}
+      <Button color="primary" variant="contained">Material button</Button>
     </div>
   );
 }
