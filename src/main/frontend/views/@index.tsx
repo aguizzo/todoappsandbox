@@ -8,6 +8,7 @@ export default function HomeView() {
       <img style={{ width: '200px' }} src="images/empty-plant.png" />
       <h2>This place intentionally left empty</h2>
       <p>It’s a place where you can grow your own UI 🤗</p>
+      <p>Home</p>
     </div>
   );
 }
